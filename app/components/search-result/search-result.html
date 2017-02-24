@@ -1,0 +1,5 @@
+<search-property-form transition-to="'search-result'" q="query" ></search-property-form>
+
+<div ng-show="! hasResult()" > No se encontraron resultados, intente con otras características </div>
+<property-list properties="properties" ng-show="hasResult()" />
+

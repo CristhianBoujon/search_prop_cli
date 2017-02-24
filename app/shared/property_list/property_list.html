@@ -1,0 +1,24 @@
+<link href="shared/property_list/property_list.css" rel="stylesheet" />
+
+<section class="col-xs-12 col-sm-6 col-md-12">
+
+	<article class="search-result row" ng-repeat="property in properties">
+		<div class="col-xs-12 col-sm-12 col-md-2">
+			<img class="img-thumbnail" ng-src="{{ base_url + property.thumb}}" alt="Description" />
+		</div>
+		
+		<div class="col-xs-12 col-sm-12 col-md-2">
+			<ul class="meta-search">
+				<li><i class="glyphicon glyphicon-calendar"></i> <span>{{ property.created_at | date:'shortDate' }}</span></li>
+				<li><i class="glyphicon glyphicon-time"></i> <span>4:28 pm</span></li>
+				<li><i class="glyphicon glyphicon-tags"></i> <span>People</span></li>
+			</ul>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+			<h3><a ng-click="show(property.type, property.id)" title=""> {{property.name}} </a></h3>
+			<p> {{ property.detail  | limitTo: 500 }} </p>
+		</div>
+		<span class="clearfix borda"></span>
+	</article>
+</section>

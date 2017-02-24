@@ -1,0 +1,72 @@
+General
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="propertyType"> Tipo de Propiedad </label>
+        <div class="col-sm-10">
+            <select
+                class="form-control"
+                id="propertyType"
+                ng-model="propertyType" 
+                ng-options="propertyType.type as propertyType.label for propertyType in propertyTypes">
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="name"> Título </label>
+        <div class="col-sm-10">
+            <input class="form-control" id="name" type="text" ng-model="property.name" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="price">Precio</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="price" type="number" ng-model="property.price" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="detail"> Descripción </label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="detail" ng-model="property.detail">
+                
+            </textarea>
+        </div>
+    </div>
+
+    <div ui-view></div>
+
+    <div flow-init
+         flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+         flow-files-submitted="setImages( $files, $event, $flow )"
+         flow-name="flow.images">
+
+        <button class="btn btn-default" 
+                ngf-select="uploadFiles($files, $invalidFiles)" multiple
+                accept="image/*" >
+            <span class="glyphicon glyphicon-plus-sign" style="color:green"></span>
+            Agregar Imagenes
+        </button>
+
+        <table>
+            <div ng-repeat="file in files">
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img ngf-thumbnail="file">
+                        <div class="progress" ng-show="file.progress >= 0">
+                            <div class="progress-bar" style="width:{{file.progress}}%"  
+                                 ng-bind="file.progress + '%'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" ng-click="save()">Publicar!</button>
+        </div>
+    </div>
+</form>

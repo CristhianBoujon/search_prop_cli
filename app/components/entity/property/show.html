@@ -1,0 +1,15 @@
+<section>
+	<div class="page-header">
+		<h1 class="text-uppercase"><small> {{ property.name }} </small></h1>
+	</div>
+	
+	<span class="h3">
+		<span style="color: green"> {{ property.price | currency }} </span>
+	</span>
+
+	<gallery images="images"></gallery>
+
+	{{ property.detail }}
+
+	<div ui-view=""></div>
+</section>

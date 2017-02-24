@@ -1,0 +1,16 @@
+Usos
+<div ng-repeat="target in fieldTargets">
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label >
+                    <input type="checkbox" 
+                           ng-model="$scope.property.selectedTargets[target.id]"
+                           ng-change="targetChanged(target.id)"/>
+
+                    {{target.title}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

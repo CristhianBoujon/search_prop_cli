@@ -1,0 +1,78 @@
+<form class="container">
+
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <label class="control-label" for="propertyType"> ¿Qué buscas? </label>
+
+            <select
+                class="form-control"
+                id="data.type"
+                ng-model="q.property_type" 
+                ng-options="propertyType.type as propertyType.label for propertyType in propertyTypes">
+            </select>
+
+        </div>
+
+        <div class="col-xs-2">
+            <label class="control-label" for="bedrooms"> ¿Cuántas Habitaciones? </label>
+            <input type="number" ng-model="q.bedrooms" min="0" id="bedrooms" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-6">
+            <label for="prince" >Precio</label>
+            <rzslider rz-slider-model="q.min_price" rz-slider-high="q.max_price" rz-slider-options="price_slider_config.options" id="price"></rzslider>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-2">
+                <div class="checkbox-inline">
+                    <label class="control-label" for="pets">
+                        <input type="checkbox" ng-model="q.pets" value="yes" id="pets" />     
+                        Tengo Mascota
+                    </label>
+                </div>         
+            </div>
+
+            <div class="col-xs-2">
+                <div class="checkbox-inline">            
+                    <label class="control-label" for="children">
+                        <input type="checkbox" ng-model="q.children" value="yes" id="children" />
+                        Tengo Niños
+                    </label>         
+                </div>
+            </div>
+
+        </div>
+        <div class="row">    
+            <div class="col-xs-2">
+                <div class="checkbox-inline">            
+                    <label class="control-label" for="garden">
+                        <input type="checkbox" ng-model="q.garden" value="yes" id="garden" />
+                        Con Patio
+                    </label>         
+                </div>
+            </div>
+
+            <div class="col-xs-2">
+                <div class="checkbox-inline">
+                    <label class="control-label" for="garage">
+                        <input type="checkbox" ng-model="q.garage" value="yes" id="garage" />     
+                        Con Cochera
+                    </label>         
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <button class="btn btn-primary" type="button" ng-click="send_query()"> Buscar </button>
+    </div>
+
+</form>
+

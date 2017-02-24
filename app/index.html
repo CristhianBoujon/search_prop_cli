@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My AngularJS App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+        <link rel="stylesheet" href="app.css">
+        <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <ul class="menu">
+
+        </ul>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <div ui-view=""></div>
+        </div>
+        <div>Angular seed app: v<span app-version></span></div>
+
+
+        <!-- Vendors -->
+        <!--CSS-->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+
+        <!--End CSS-->
+        <!--Javascript-->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-inflector/dist/angular-inflector.js"></script>
+        <script src="bower_components/angular-inflector/dist/angular-inflector.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.min.css"/>
+        <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+
+        <link  href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css" rel="stylesheet" />
+        <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>        
+
+        <script src="shared/shared.js"></script>
+        
+        <script src="shared/property_list/property_list.js"></script>
+        <script src="shared/property_list/property_list_controller.js"></script>
+        
+        <script src="shared/codingObjectService/codingObjectService.js"></script>
+
+        <script src="shared/search_property_form/searchPropertyForm-directive.js"></script>
+        <script src="shared/search_property_form/searchPropertyController.js"></script>
+        <script src="shared/property_resource/property_resource.js"></script>
+        <script src="shared/property_state/entity_state_provider.js"></script>
+
+        <script src="shared/gallery/gallery-directive.js"></script>        
+        <script src="shared/gallery/galleryController.js"></script>
+
+        <script src="components/entity/property/property.js"></script>
+        <script src="components/entity/property/showPropertyController.js"></script>        
+        <script src="components/entity/house/showHouseController.js"></script>
+        <script src="components/entity/property/propertyController.js"></script>
+        <script src="components/entity/field/fieldController.js"></script>
+        <!--<script src="components/entity/property/entity_provider.js"></script> -->
+
+        <script src="components/home/home.js"></script>
+        <script src="components/home/homeController.js"></script>
+
+        <script src="components/search-result/search-result.js"></script>
+        <script src="components/search-result/searchResultController.js"></script>
+
+        <script src="angular-locale_es-ar.js"></script>
+
+        <script src="app.js"></script>
+    </body>
+</html>

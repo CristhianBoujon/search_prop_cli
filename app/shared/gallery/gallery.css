@@ -1,0 +1,10 @@
+a {
+    cursor: pointer;
+}
+
+.gallery li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1em 1em 0;
+    text-align: center;
+}
